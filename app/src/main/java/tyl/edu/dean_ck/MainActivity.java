@@ -1,40 +1,65 @@
 package tyl.edu.dean_ck;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+
+import tyl.edu.dean_ck.adapter.TruyenAdapterNew;
+import tyl.edu.dean_ck.model.Truyen;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView txtXinChao, txtEmail;
+    RecyclerView recyclerTruyen;
+
+    ArrayList<Truyen> listTruyen;
+
+    TruyenAdapterNew adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        txtXinChao =
-                findViewById(R.id.txtXinChao);
+        AnhXa();
 
-        txtEmail =
-                findViewById(R.id.txtEmail);
+        listTruyen = new ArrayList<>();
 
-        Intent intent = getIntent();
+        // Dữ liệu test
+        listTruyen.add(new Truyen(
+                "One Piece",
+                "Nội dung One Piece",
+                "https://upload.wikimedia.org/wikipedia/en/6/65/One_Piece_Logo.svg",
+                1
+        ));
 
-        String tentaikhoan =
-                intent.getStringExtra("tentaikhoan");
+        listTruyen.add(new Truyen(
+                "Naruto",
+                "Nội dung Naruto",
+                "https://upload.wikimedia.org/wikipedia/en/9/94/NarutoCoverTankobon1.jpg",
+                1
+        ));
 
-        String email =
-                intent.getStringExtra("email");
+        listTruyen.add(new Truyen(
+                "Dragon Ball",
+                "Nội dung Dragon Ball",
+                "https://upload.wikimedia.org/wikipedia/en/c/c9/DB_Tank%C5%8Dbon.png",
+                1
+        ));
 
-        txtXinChao.setText(
-                "Xin chào: " + tentaikhoan
+        adapter = new TruyenAdapterNew(this, listTruyen);
+
+        recyclerTruyen.setLayoutManager(
+                new LinearLayoutManager(this)
         );
 
-        txtEmail.setText(
-                "Email: " + email
-        );
+        recyclerTruyen.setAdapter(adapter);
+    }
+
+    private void AnhXa() {
+        recyclerTruyen = findViewById(R.id.recyclerTruyen);
     }
 }
