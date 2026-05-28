@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_mhc"
+    android:orientation="vertical"
+    tools:context=".ManDangKy">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="Đăng ký"
+        android:textColor="#FF9800"
+        android:textSize="40sp" />
+
+    <EditText
+        android:id="@+id/dktaikhoan"
+        android:layout_width="259dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/dn_edt"
+        android:drawableRight="@drawable/ic_taikhoan"
+        android:fontFamily="@font/quicksand"
+        android:hint="  Tài khoản"
+        android:textColorHint="#99000000" />
+
+    <EditText
+        android:id="@+id/dkmatkhau"
+        android:layout_width="259dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/dn_edt"
+        android:drawableRight="@drawable/ic_matkhau"
+        android:fontFamily="@font/quicksand"
+        android:hint="  Mật khẩu"
+        android:inputType="textPassword"
+        android:textColorHint="#99000000" />
+
+    <EditText
+        android:id="@+id/dkemail"
+        android:layout_width="259dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/dn_edt"
+        android:drawableRight="@drawable/ic_email"
+        android:fontFamily="@font/quicksand"
+        android:hint="  Email"
+        android:textColorHint="#99000000" />
+
+    <Button
+        android:id="@+id/dkdangky"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#F8BBCF"
+        android:text="Đăng ký"
+        android:textColor="#453535"
+        app:cornerRadius="10dp" />
+
+    <Button
+        android:id="@+id/dkdangnhap"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#F8BBCF"
+        android:text="Trở về"
+        android:textColor="#453535"
+        app:cornerRadius="10dp" />
+
+</LinearLayout>
