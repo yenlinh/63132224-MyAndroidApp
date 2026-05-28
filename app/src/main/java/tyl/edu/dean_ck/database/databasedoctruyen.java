@@ -290,4 +290,9 @@ public class databasedoctruyen extends SQLiteOpenHelper {
         int res = db.delete(TABLE_TRUYEN,ID_TRUYEN+" = "+i,null);
         return res;
     }
+    // Kiểm tra đăng nhập
+    public Cursor getDataTaiKhoan() {
+        String sql = "SELECT * FROM taikhoan";
+        return database.rawQuery(sql, null);
+    }
 }
