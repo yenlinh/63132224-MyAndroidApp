@@ -292,7 +292,8 @@ public class databasedoctruyen extends SQLiteOpenHelper {
     }
     // Kiểm tra đăng nhập
     public Cursor getDataTaiKhoan() {
+        SQLiteDatabase db = this.getReadableDatabase();
         String sql = "SELECT * FROM taikhoan";
-        return database.rawQuery(sql, null);
+        return db.rawQuery(sql, null);
     }
 }

@@ -17,7 +17,7 @@ public class TaiKhoan {
         this.phanQuyen = phanQuyen;
     }
 
-    public String getTenTaiKhoan() {
+    public String getmTenTaiKhoan() {
         return tenTaiKhoan;
     }
 
@@ -25,7 +25,7 @@ public class TaiKhoan {
         this.tenTaiKhoan = tenTaiKhoan;
     }
 
-    public String getMatKhau() {
+    public String getmMatkhau() {
         return matKhau;
     }
 
@@ -33,7 +33,7 @@ public class TaiKhoan {
         this.matKhau = matKhau;
     }
 
-    public String getEmail() {
+    public String getmEmail() {
         return email;
     }
 
@@ -41,7 +41,7 @@ public class TaiKhoan {
         this.email = email;
     }
 
-    public int getPhanQuyen() {
+    public int getmPhanQuyen() {
         return phanQuyen;
     }
 
