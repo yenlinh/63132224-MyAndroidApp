@@ -1,25 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerlayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TRUYỆN MỚI"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:textAlignment="center"
-        android:padding="10dp"/>
+        android:layout_height="match_parent">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerTruyen"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:background="#F5E4DA"
+                app:titleTextColor="#000000"
+                android:id="@+id/toolbarmanhinhchinh"
+                app:title="Tủ Truyện"
+                android:fontFamily="@font/quicksand_bold"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <ViewFlipper
+                android:background="#FFFFFF"
+                android:id="@+id/viewflipper"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+            </ViewFlipper>
+
+            <LinearLayout
+                android:background="#F5E4DA"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="Mới nhất"
+                    android:textColor="#C79D63"
+                    android:textSize="25sp">
+
+                </TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewNew"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:clipToPadding="false"
+                    android:scrollbars="vertical" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:layout_gravity="start"
+            android:id="@+id/navigationView"
+            android:layout_width="match_parent"
+            android:background="#C39F95"
+            android:layout_height="match_parent">
+            <ListView
+                android:id="@+id/listviewthongtin"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+            </ListView>
+            <ListView
+                android:id="@+id/listviewmanhinhchinh"
+                android:layout_marginTop="150dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </ListView>
+        </com.google.android.material.navigation.NavigationView>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
 
 </LinearLayout>

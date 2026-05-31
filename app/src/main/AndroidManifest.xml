@@ -13,6 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UngDungDocTruyen">
         <activity
+            android:name=".ManDangBai"
+            android:exported="false" />
+        <activity
+            android:name=".ManAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".ManThongTin"
+            android:exported="false" />
+        <activity
             android:name=".ManTimKiem"
             android:exported="false" />
         <activity
