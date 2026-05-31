@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UngDungDocTruyen">
         <activity
+            android:name=".ManTimKiem"
+            android:exported="false" />
+        <activity
             android:name=".ManNoiDung"
             android:exported="false" />
         <activity
