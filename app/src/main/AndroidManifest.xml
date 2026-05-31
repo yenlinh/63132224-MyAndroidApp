@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,7 +12,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.UngDungDocTruyen">
+        android:theme="@style/Theme.UngDungDocTruyen"
+        tools:targetApi="31">
         <activity
             android:name=".ManDangBai"
             android:exported="false" />
@@ -22,16 +24,16 @@
             android:name=".ManThongTin"
             android:exported="false" />
         <activity
-            android:name=".ManTimKiem"
-            android:exported="false" />
-        <activity
             android:name=".ManNoiDung"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ManTimKiem"
             android:exported="false" />
         <activity
             android:name=".ManDangKy"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".ManDangNhap"
@@ -42,6 +44,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
