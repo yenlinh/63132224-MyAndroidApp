@@ -16,6 +16,10 @@ public class TaiKhoan {
         this.email = email;
         this.phanQuyen = phanQuyen;
     }
+    public TaiKhoan(String tenTaiKhoan, String email) {
+        this.tenTaiKhoan = tenTaiKhoan;
+        this.email = email;
+    }
 
     public String getmTenTaiKhoan() {
         return tenTaiKhoan;

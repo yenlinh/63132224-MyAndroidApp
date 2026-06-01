@@ -5,43 +5,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:background="@drawable/bgmanadmin">
+    android:background="@drawable/bgquantri"
+    android:padding="16dp">
 
+    <!-- Nút quay lại -->
     <Button
         android:id="@+id/buttonQuayLai"
-        android:layout_width="77dp"
-        android:layout_height="32dp"
-        android:layout_gravity="start"
-        android:layout_marginBottom="8dp"
-        android:background="@android:color/transparent"
-        android:padding="0dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#FFFFFF"
         android:text="←"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
+        android:textColor="#333333"
+        android:textSize="22sp"
         android:textStyle="bold"
-        android:gravity="center" />
+        app:cornerRadius="24dp"
+        android:elevation="3dp" />
 
-    <Button
-        android:id="@+id/buttonThemtruyen"
+    <!-- Tiêu đề -->
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="Thêm Truyện"
-        android:backgroundTint="#F8BBCF"
-        android:textColor="#453535"
-        app:cornerRadius="10dp"
-        android:paddingLeft="24dp"
-        android:paddingRight="24dp"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        android:layout_marginBottom="12dp" />
+        android:text="Quản Lý Truyện"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp" />
 
+    <!-- Nút thêm truyện -->
+    <Button
+        android:id="@+id/buttonThemtruyen"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="➕ Thêm Truyện"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#6C63FF"
+        app:cornerRadius="12dp"
+        android:elevation="4dp"
+        android:layout_marginBottom="15dp" />
+
+    <!-- Danh sách truyện -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewAdmin"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:paddingTop="8dp"
-        android:clipToPadding="false"/>
+        android:clipToPadding="false"
+        android:paddingBottom="8dp" />
+
 </LinearLayout>

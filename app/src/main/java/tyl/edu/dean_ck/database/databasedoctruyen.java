@@ -52,7 +52,7 @@ public class databasedoctruyen extends SQLiteOpenHelper {
     //Insert dữ liệu vào bảng tài khoản
     //Phân quyền: 2.admin 1.người dùng
     private String SQLQuery2 = "INSERT INTO TaiKhoan VALUES (null,'admin','admin','admin@gmail.com',2)";
-    private String SQLQuery3 = "INSERT INTO TaiKhoan VALUES (null,'hoai','hoai','hoai@gmail.com',1)";
+    private String SQLQuery3 = "INSERT INTO TaiKhoan VALUES (null,'linh','linh','linh@gmail.com',1)";
     //Insert truyện
     private String SQLQuery4 = "INSERT INTO truyen VALUES (null,'Rùa và Thỏ','Phần 1:\n" +
             "\n" +

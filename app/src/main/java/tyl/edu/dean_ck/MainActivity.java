@@ -1,8 +1,6 @@
 package tyl.edu.dean_ck;
 
 
-import static tyl.edu.dean_ck.R.id.listviewmanhinhchinh;
-
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -197,33 +195,96 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void AnhXa() {
+
         toolbar = findViewById(R.id.toolbarmanhinhchinh);
         viewFlipper = findViewById(R.id.viewflipper);
         recyclerViewNew = findViewById(R.id.recyclerViewNew);
-        listView = findViewById(listviewmanhinhchinh);
+
+        listView = findViewById(R.id.listviewmanhinhchinh);
+
         listViewThongTin = findViewById(R.id.listviewthongtin);
         navigationView = findViewById(R.id.navigationView);
         drawerLayout = findViewById(R.id.drawerlayout);
 
         TruyenArraylist = new ArrayList<>();
 
-        // Khởi tạo adapter 1 lần duy nhất cho ListView truyện
-        adapterTruyen = new TruyenAdapterNew(getApplicationContext(), TruyenArraylist);
+        Cursor cursor = databasedoctruyen.getData1();
 
-        // Thông tin
+        while (cursor.moveToNext()) {
+            int id = cursor.getInt(0);
+            String tentruyen = cursor.getString(1);
+            String noidung = cursor.getString(2);
+            String anh = cursor.getString(3);
+            int id_tk = cursor.getInt(4);
+
+            TruyenArraylist.add(
+                    new Truyen(
+                            id,
+                            tentruyen,
+                            noidung,
+                            anh,
+                            id_tk
+                    )
+            );
+        }
+
+        cursor.close();
+
+        adapterTruyen = new TruyenAdapterNew(
+                getApplicationContext(),
+                TruyenArraylist
+        );
+
+        // THÔNG TIN
         taiKhoanArrayList = new ArrayList<>();
-        taiKhoanArrayList.add(new TaiKhoan(tentaikhoan, email));
 
-        adapterthongtin = new adapterthongtin(this, R.layout.navigation_thongtin, taiKhoanArrayList);
+        taiKhoanArrayList.add(
+                new TaiKhoan(
+                        tentaikhoan,
+                        "",
+                        email,
+                        i
+                )
+        );
+
+        adapterthongtin = new adapterthongtin(
+                this,
+                R.layout.navigation_thongtin,
+                taiKhoanArrayList
+        );
+
         listViewThongTin.setAdapter(adapterthongtin);
 
-        // chuyên mục
+        // CHUYÊN MỤC
         chuyenmucArrayList = new ArrayList<>();
-        chuyenmucArrayList.add(new chuyenmuc("Đăng bài", "https://cdn0.iconfinder.com/data/icons/influencer-line/48/blogger_blog_post_article-512.png"));
-        chuyenmucArrayList.add(new chuyenmuc("Thông tin", "https://cdn.pixabay.com/photo/2012/04/24/23/56/information-41225_1280.png"));
-        chuyenmucArrayList.add(new chuyenmuc("Đăng xuất", "https://creazilla-store.fra1.digitaloceanspaces.com/icons/3209836/logout-icon-md.png"));
 
-        adapterchuyenmuc = new adapterchuyenmuc(this, R.layout.chuyenmuc, chuyenmucArrayList);
+        chuyenmucArrayList.add(
+                new chuyenmuc(
+                        "Đăng bài",
+                        "https://cdn0.iconfinder.com/data/icons/influencer-line/48/blogger_blog_post_article-512.png"
+                )
+        );
+
+        chuyenmucArrayList.add(
+                new chuyenmuc(
+                        "Thông tin",
+                        "https://cdn.pixabay.com/photo/2012/04/24/23/56/information-41225_1280.png"
+                )
+        );
+
+        chuyenmucArrayList.add(
+                new chuyenmuc(
+                        "Đăng xuất",
+                        "https://cdn-icons-png.flaticon.com/512/1828/1828479.png"
+                )
+        );
+
+        adapterchuyenmuc = new adapterchuyenmuc(
+                this,
+                R.layout.chuyenmuc,
+                chuyenmucArrayList
+        );
+
         listView.setAdapter(adapterchuyenmuc);
     }
 

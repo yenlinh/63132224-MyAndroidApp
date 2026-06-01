@@ -1,26 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/bgmantimkiem"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bgtimkiem"
+    android:padding="12dp"
     tools:context=".ManTimKiem">
 
+    <!-- Tiêu đề -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🔍 Tìm Kiếm Truyện"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:fontFamily="@font/quicksand_bold"
+        android:gravity="center"
+        android:layout_marginBottom="15dp"/>
+
+    <!-- Thanh tìm kiếm -->
     <EditText
         android:id="@+id/timkiem"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_margin="5dp"
-        android:hint="Tìm kiếm"
-        android:fontFamily="@font/quicksand"
-        android:textColor="#040404"
-        android:textColorHint="#040404"/>
+        android:layout_height="55dp"
+        android:background="#FFFFFF"
+        android:drawableStart="@android:drawable/ic_menu_search"
+        android:drawablePadding="10dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:hint="Nhập tên truyện..."
+        android:textColor="#333333"
+        android:textColorHint="#888888"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewTimKiem"
+    <!-- Danh sách kết quả -->
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="8dp"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="5dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewTimKiem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"/>
+
+    </androidx.cardview.widget.CardView>
+
 </LinearLayout>

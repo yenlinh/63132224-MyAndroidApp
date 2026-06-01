@@ -21,7 +21,7 @@ public class ManThongTin extends AppCompatActivity {
         txtThongtinapp = findViewById(R.id.textviewthongtin);
         buttonQuayLai = findViewById(R.id.buttonQuayLai);
 
-        String thongtin = "Ứng dụng được thiết kế bởi 'Hoài và Khoa'\n"+
+        String thongtin = "Ứng dụng được thiết kế bởi Linh\n"+
                 "Ứng dụng được tham khảo từ các nguồn link trên mạng\n"+
                 "Cảm ơn mọi người đã sử dụng app";
 

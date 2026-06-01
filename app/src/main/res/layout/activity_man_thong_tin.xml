@@ -1,47 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/bgmanthongtin"
+    android:background="@drawable/bgthongtintruyen"
+    android:padding="12dp"
     tools:context=".ManThongTin">
 
-    <!-- Nút quay lại -->
+    <!-- Quay lại -->
     <Button
         android:id="@+id/buttonQuayLai"
-        android:layout_width="77dp"
-        android:layout_height="32dp"
-        android:layout_gravity="start"
-        android:layout_marginBottom="8dp"
-        android:background="@android:color/transparent"
-        android:padding="0dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:text="←"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
+        android:textSize="22sp"
         android:textStyle="bold"
-        android:gravity="center" />
+        android:textColor="#333333"
+        android:backgroundTint="#FFFFFF"
+        app:cornerRadius="24dp" />
 
-    <!-- Tiêu đề "Thông tin" -->
+    <!-- Tiêu đề -->
     <TextView
-        android:layout_marginTop="10dp"
-        android:textColor="#2196F3"
-        android:fontFamily="@font/quicksand_bold"
-        android:layout_gravity="center"
-        android:textSize="40sp"
-        android:text="Thông tin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <!-- Nội dung thông tin app -->
-    <TextView
-        android:id="@+id/textviewthongtin"
-        android:padding="20dp"
-        android:textSize="25sp"
-        android:fontFamily="@font/quicksand_bold"
-        android:layout_marginTop="20dp"
-        android:textColor="@android:color/black"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:gravity="center"
+        android:text="📖 Thông Tin"
+        android:textColor="#333333"
+        android:textSize="40sp" />
+
+    <!-- Khung nội dung -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#B0BEC5">
+
+            <TextView
+                android:id="@+id/textviewthongtin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:textColor="#444444"
+                android:textSize="30sp"
+                android:lineSpacingExtra="8dp" />
+
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
 </LinearLayout>

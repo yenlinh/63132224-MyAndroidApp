@@ -1,47 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:background="@drawable/bgdangnhap">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Đăng nhập"
-        android:textSize="35sp"
-        android:textStyle="bold"/>
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
 
-    <EditText
-        android:id="@+id/taikhoan"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:hint="Tài khoản"
-        android:layout_marginTop="30dp"/>
+        <!-- Tiêu đề -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:text="📚 Tủ Truyện"
+            android:textColor="#333333"
+            android:textSize="40sp"
+            android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/matkhau"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:hint="Mật khẩu"
-        android:inputType="textPassword"
-        android:layout_marginTop="15dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Đăng nhập để tiếp tục"
+            android:textColor="#777777"
+            android:textSize="15sp" />
 
-    <Button
-        android:id="@+id/dangnhap"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Đăng nhập"
-        android:layout_marginTop="20dp"/>
+        <!-- Tài khoản -->
+        <EditText
+            android:id="@+id/taikhoan"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/dn_edt"
+            android:drawableEnd="@drawable/ic_taikhoan"
+            android:drawablePadding="10dp"
+            android:hint="Tài khoản"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColorHint="#888888" />
 
-    <Button
-        android:id="@+id/dangky"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Đăng ký"
-        android:layout_marginTop="10dp"/>
+        <!-- Mật khẩu -->
+        <EditText
+            android:id="@+id/matkhau"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/dn_edt"
+            android:drawableEnd="@drawable/ic_matkhau"
+            android:drawablePadding="10dp"
+            android:hint="Mật khẩu"
+            android:inputType="textPassword"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColorHint="#888888" />
 
-</LinearLayout>
+        <!-- Đăng nhập -->
+        <Button
+            android:id="@+id/dangnhap"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="#6C63FF"
+            android:text="Đăng Nhập"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="12dp" />
+
+        <!-- Đăng ký -->
+        <Button
+            android:id="@+id/dangky"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#E8EAF6"
+            android:text="Tạo Tài Khoản Mới"
+            android:textAllCaps="false"
+            android:textColor="#6C63FF"
+            android:textSize="15sp"
+            app:cornerRadius="12dp" />
+
+    </LinearLayout>
+
+</ScrollView>

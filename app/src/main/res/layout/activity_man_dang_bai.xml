@@ -1,76 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/bgmandangbai"
+    android:background="@drawable/bgthemtruyen"
     tools:context=".ManDangBai">
 
-    <TextView
-        android:textColor="#C16D8A"
-        android:fontFamily="@font/quicksand_bold"
-        android:layout_marginTop="70dp"
-        android:gravity="center"
-        android:textSize="30sp"
-        android:text="Đăng Bài"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </TextView>
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
 
-    <EditText
-        android:id="@+id/dbTenTruyen"
-        android:layout_width="311dp"
-        android:layout_height="47dp"
-        android:background="@drawable/dn_edt"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/quicksand"
-        android:hint=" Tên Truyện"
-        android:inputType="text"
-        android:textColorHint="#99000000"></EditText>
+        <!-- Tiêu đề -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📚 Đăng Truyện Mới"
+            android:textAlignment="center"
+            android:textColor="#333333"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="25dp"/>
 
-    <EditText
-        android:id="@+id/dbnoidung"
-        android:layout_width="311dp"
-        android:layout_height="293dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/dn_edt"
-        android:fontFamily="@font/quicksand"
-        android:gravity="top|start"
-        android:hint="Nội dung"
-        android:inputType="textMultiLine"
-        android:maxLines="10"
-        android:padding="10dp"
-        android:scrollbars="vertical"
-        android:textColorHint="#99000000" />
+        <!-- Tên truyện -->
+        <EditText
+            android:id="@+id/dbTenTruyen"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Tên truyện"
+            android:background="@drawable/dn_edt"
+            android:padding="15dp"
+            android:fontFamily="@font/quicksand"
+            android:textColor="#333333"
+            android:textColorHint="#888888"
+            android:layout_marginBottom="15dp"/>
 
-    <EditText
-        android:inputType="text"
-        android:id="@+id/dbimg"
-        android:hint="  Ảnh"
-        android:textColorHint="#99000000"
-        android:fontFamily="@font/quicksand"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:layout_width="311dp"
-        android:layout_height="47dp"
-        android:background="@drawable/dn_edt">
-    </EditText>
+        <!-- Nội dung -->
+        <EditText
+            android:id="@+id/dbnoidung"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:hint="Nhập nội dung truyện..."
+            android:gravity="top|start"
+            android:background="@drawable/dn_edt"
+            android:padding="15dp"
+            android:fontFamily="@font/quicksand"
+            android:textColor="#333333"
+            android:textColorHint="#888888"
+            android:inputType="textMultiLine"
+            android:maxLines="15"
+            android:layout_marginBottom="15dp"/>
 
-    <Button
-        android:id="@+id/dbdangbai"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:text="Đăng bài"
-        android:backgroundTint="#F8BBCF"
-        android:textColor="#453535"
-        app:cornerRadius="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    </Button>
+        <!-- Link ảnh -->
+        <EditText
+            android:id="@+id/dbimg"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Link ảnh bìa"
+            android:background="@drawable/dn_edt"
+            android:padding="15dp"
+            android:fontFamily="@font/quicksand"
+            android:textColor="#333333"
+            android:textColorHint="#888888"
+            android:layout_marginBottom="25dp"/>
 
-</LinearLayout>
+        <!-- Nút đăng -->
+        <Button
+            android:id="@+id/dbdangbai"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Đăng Truyện"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#6C63FF"
+            app:cornerRadius="12dp"/>
+
+    </LinearLayout>
+
+</ScrollView>
