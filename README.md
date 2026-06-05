@@ -1,2 +1,6 @@
 # 63132224-MyAndroidApp
-Dự án app cuối kỳ
+Video Dự án app cuối kỳ
+
+https://drive.google.com/file/d/17GPlsF5uq43SjkI7TFIPwiFpQLH9PXzq/view?usp=drivesdk
+
+
